@@ -4,7 +4,14 @@ LABEL org.opencontainers.image.source="https://github.com/n-i-x/pico-sdk-dev-con
 ENV PICO_SDK_VERSION=2.2.0
 
 RUN apt update \
-    && apt install -y --no-install-recommends build-essential cmake gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib libusb-1.0-0-dev pkg-config \
+    && apt install -y --no-install-recommends \
+    build-essential \
+    cmake \
+    gcc-arm-none-eabi \
+    libnewlib-arm-none-eabi \
+    libstdc++-arm-none-eabi-newlib \
+    libusb-1.0-0-dev \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/* /var/log/apt/* /var/log/dpkg.log /var/log/alternatives.log /var/cache/
 
 # Build and install picotool first to avoid SDK build warnings
