@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:jammy
-LABEL org.opencontainers.image.source = "https://github.com/n-i-x/pico-sdk-dev-container"
+LABEL org.opencontainers.image.source="https://github.com/n-i-x/pico-sdk-dev-container"
 
-ENV PICO_SDK_VERSION 1.5.0
+ENV PICO_SDK_VERSION=1.5.1
 
 RUN apt update \
     && apt install -y --no-install-recommends build-essential cmake gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib \
@@ -13,4 +13,4 @@ RUN git clone -b ${PICO_SDK_VERSION} https://github.com/raspberrypi/pico-sdk.git
     && cd /opt/pico-sdk/build \
     && cmake ..
 
-ENV PICO_SDK_PATH /opt/pico-sdk
+ENV PICO_SDK_PATH=/opt/pico-sdk

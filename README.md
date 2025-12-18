@@ -1,9 +1,20 @@
 # RaspberryPi Pico SDK Dev Container for VSCode
 
-![example workflow](https://github.com/dodancs/pico-sdk-dev-container/actions/workflows/build-docker.yml/badge.svg)
+![example workflow](https://github.com/n-i-x/pico-sdk-dev-container/actions/workflows/build-docker.yml/badge.svg)
 
 
 This project is aimed to provide an easy-to-set-up environment to develop software for the [RaspberryPi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/) with the [Pico-SDK for C++](https://github.com/raspberrypi/pico-sdk) | [PDF Documentation](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf). This is a Docker image primarly used via [Development containers](https://containers.dev/) in [VSCode](https://code.visualstudio.com/).
+
+# Available SDK Versions
+
+The following Pico SDK versions are available as pre-built images:
+
+| SDK Version | Docker Image Tag | Pico SDK Release |
+|-------------|------------------|------------------|
+| 1.5.0 | `ghcr.io/n-i-x/pico-sdk-dev-container:1.5.0` | [Release 1.5.0](https://github.com/raspberrypi/pico-sdk/releases/tag/1.5.0) |
+| 1.5.1 | `ghcr.io/n-i-x/pico-sdk-dev-container:1.5.1` | [Release 1.5.1](https://github.com/raspberrypi/pico-sdk/releases/tag/1.5.1) |
+
+Use `latest` tag for the most recent version, or pin to a specific version for reproducible builds.
 
 # What does this image provide?
 
@@ -45,11 +56,11 @@ TODO: Simple initialization script
    ```json
    // For format details, see https://aka.ms/devcontainer.json. For config options, see the
    // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
-   // README at: https://github.com/dodancs/pico-sdk-dev-container
+   // README at: https://github.com/n-i-x/pico-sdk-dev-container
    {
        "name": "Pico-SDK Dev Container",
        // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-       "image": "ghcr.io/dodancs/pico-sdk-dev-container:latest",
+       "image": "ghcr.io/n-i-x/pico-sdk-dev-container:latest",
        "features": {},
        // Features to add to the dev container. More info: https://containers.dev/features.
        // "features": {},
