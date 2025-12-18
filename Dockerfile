@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/devcontainers/base:jammy
-LABEL org.opencontainers.image.source = "https://github.com/dodancs/pico-sdk-dev-container"
+LABEL org.opencontainers.image.source = "https://github.com/n-i-x/pico-sdk-dev-container"
 
 ENV PICO_SDK_VERSION 1.5.0
 
