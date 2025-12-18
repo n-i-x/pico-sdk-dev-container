@@ -11,9 +11,11 @@ The following Pico SDK versions are available as pre-built images:
 
 | SDK Version | Docker Image Tag | Pico SDK Release |
 |-------------|------------------|------------------|
-| 1.5.0 | `ghcr.io/n-i-x/pico-sdk-dev-container:1.5.0` | [Release 1.5.0](https://github.com/raspberrypi/pico-sdk/releases/tag/1.5.0) |
-| 1.5.1 | `ghcr.io/n-i-x/pico-sdk-dev-container:1.5.1` | [Release 1.5.1](https://github.com/raspberrypi/pico-sdk/releases/tag/1.5.1) |
 | 2.1.0 | `ghcr.io/n-i-x/pico-sdk-dev-container:2.1.0` | [Release 2.1.0](https://github.com/raspberrypi/pico-sdk/releases/tag/2.1.0) |
+| 2.0.0 | `ghcr.io/n-i-x/pico-sdk-dev-container:2.0.0` | [Release 2.1.0](https://github.com/raspberrypi/pico-sdk/releases/tag/2.0.0) |
+| 1.5.1 | `ghcr.io/n-i-x/pico-sdk-dev-container:1.5.1` | [Release 1.5.1](https://github.com/raspberrypi/pico-sdk/releases/tag/1.5.1) |
+| 1.5.0 | `ghcr.io/n-i-x/pico-sdk-dev-container:1.5.0` | [Release 1.5.0](https://github.com/raspberrypi/pico-sdk/releases/tag/1.5.0) |
+
 
 Use `latest` tag for the most recent version, or pin to a specific version for reproducible builds.
 
