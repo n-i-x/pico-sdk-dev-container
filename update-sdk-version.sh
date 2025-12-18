@@ -32,18 +32,15 @@ TABLE_ENTRY="| $SDK_VERSION | \`ghcr.io/n-i-x/pico-sdk-dev-container:$SDK_VERSIO
 if grep -q "$SDK_VERSION" README.md; then
     echo "⚠ Version $SDK_VERSION already exists in README.md, skipping table update"
 else
-    # Insert new row after the existing table entries (before the blank line after table)
+    # Insert new row after the table header separator (second line of table)
     awk -v entry="$TABLE_ENTRY" '
-        /^\| [0-9]+\.[0-9]+\.[0-9]+ \|/ { last_row = NR }
-        { lines[NR] = $0 }
-        END {
-            for (i = 1; i <= NR; i++) {
-                print lines[i]
-                if (i == last_row) {
-                    print entry
-                }
-            }
+        /^\|[-]+\|[-]+\|[-]+\|$/ && !inserted {
+            print $0
+            print entry
+            inserted = 1
+            next
         }
+        { print }
     ' README.md > README.md.tmp
     mv README.md.tmp README.md
     echo "✓ Updated README.md"
