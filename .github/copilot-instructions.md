@@ -40,7 +40,7 @@ To generate `.uf2` firmware, executables MUST call `pico_add_extra_outputs(targe
 - Always link libraries with `target_link_libraries(target pico_stdlib ...)`
 
 ## Docker Image Publishing
-- **Registry:** GitHub Container Registry (`ghcr.io/dodancs/pico-sdk-dev-container`)
+- **Registry:** GitHub Container Registry (`ghcr.io/n-i-x/pico-sdk-dev-container`)
 - **Triggers:** Daily cron (10:00 UTC), all branch pushes, PRs to main, semver tags
 - **Multi-arch:** Builds for `linux/amd64` and `linux/arm64`
 - **Tagging:** `latest` (main branch), `sha-<commit>`, semver patterns for releases
