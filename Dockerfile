@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:jammy
 LABEL org.opencontainers.image.source="https://github.com/n-i-x/pico-sdk-dev-container"
 
-ENV PICO_SDK_VERSION=2.1.0
+ENV PICO_SDK_VERSION=2.1.1
 
 RUN apt update \
     && apt install -y --no-install-recommends build-essential cmake gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib \
