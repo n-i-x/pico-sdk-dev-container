@@ -14,7 +14,13 @@ RUN apt update \
     pkg-config \
     && rm -rf /var/lib/apt/lists/* /var/log/apt/* /var/log/dpkg.log /var/log/alternatives.log /var/cache/
 
-# Build and install picotool first to avoid SDK build warnings
+# Clone Pico SDK first (required by picotool)
+RUN git clone -b ${PICO_SDK_VERSION} https://github.com/raspberrypi/pico-sdk.git /opt/pico-sdk \
+    && git -C /opt/pico-sdk submodule update --init
+
+ENV PICO_SDK_PATH=/opt/pico-sdk
+
+# Build and install picotool to avoid SDK build warnings
 RUN git clone -b ${PICO_SDK_VERSION} https://github.com/raspberrypi/picotool.git /tmp/picotool \
     && mkdir /tmp/picotool/build && cd /tmp/picotool/build \
     && cmake .. \
@@ -22,10 +28,7 @@ RUN git clone -b ${PICO_SDK_VERSION} https://github.com/raspberrypi/picotool.git
     && make install \
     && rm -rf /tmp/picotool
 
-RUN git clone -b ${PICO_SDK_VERSION} https://github.com/raspberrypi/pico-sdk.git /opt/pico-sdk \
-    && git -C /opt/pico-sdk submodule update --init \
-    && mkdir /opt/pico-sdk/build \
+# Build Pico SDK
+RUN mkdir /opt/pico-sdk/build \
     && cd /opt/pico-sdk/build \
     && cmake ..
-
-ENV PICO_SDK_PATH=/opt/pico-sdk
