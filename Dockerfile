@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:jammy
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 LABEL org.opencontainers.image.source="https://github.com/n-i-x/pico-sdk-dev-container"
 
 ENV PICO_SDK_VERSION=2.2.0
