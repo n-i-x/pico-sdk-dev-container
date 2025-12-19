@@ -12,6 +12,7 @@ RUN apt update \
     libstdc++-arm-none-eabi-newlib \
     libusb-1.0-0-dev \
     pkg-config \
+    python3 \
     && rm -rf /var/lib/apt/lists/* /var/log/apt/* /var/log/dpkg.log /var/log/alternatives.log /var/cache/
 
 # Clone Pico SDK first (required by picotool)
